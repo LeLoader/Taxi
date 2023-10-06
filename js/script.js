@@ -19,7 +19,7 @@ async function Main(name, timer = 0){ //Main fonction du programme
         MusicSwitch(personnage);
         await sleep(timer);
         personnage.redTrafficLight -= 1; //On baisse le nombre de feu
-        if (personnage.redTrafficLight == 1){ //Feu au singulier ou pluriel
+        if (personnage.redTrafficLight == 1 || personnage.redTrafficLight == 0){ //Feu au singulier ou pluriel
             console.log(`Il reste ${personnage.redTrafficLight} feu`);
             document.title = `"Balade" en taxi: ${personnage.redTrafficLight} feu restant avant la maison.` //Changement du titre de la page (au singulier).
         }
